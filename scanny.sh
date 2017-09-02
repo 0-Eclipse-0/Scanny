@@ -16,6 +16,6 @@ else
 	read -r output_file
 
 	echo "$prog_name Starting scan on $target, with port(s) $ports..."
-	nc -v -z -w $timeout $target $ports >$output_file
+	nc -v -z -w $timeout $target $ports > $output_file 2>&1
 	echo "$prog_name Finished scan, output saved to $output_file..."
 fi
